@@ -246,18 +246,4 @@ app.get('/api/test-sample', (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 3001;
-
-ensureCacheDir().then(() => {
-  app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
-    console.log(`💻 Platform: ${process.platform}`);
-    console.log(`📁 Cache directory: ${CACHE_DIR}`);
-    console.log(`⚠️  Using simulated radar data`);
-    console.log(`🔗 Endpoints:`);
-    console.log(`   - http://localhost:${PORT}/`);
-    console.log(`   - http://localhost:${PORT}/health`);
-    console.log(`   - http://localhost:${PORT}/api/radar-data`);
-    console.log(`   - http://localhost:${PORT}/api/test-sample (instant sample data)`);
-  });
-});
+export default app;
