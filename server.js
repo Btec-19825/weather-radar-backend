@@ -246,4 +246,5 @@ app.get('/api/test-sample', (req, res) => {
   });
 });
 
-export default app;
+module.exports = app;
+
